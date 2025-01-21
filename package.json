@@ -1,0 +1,27 @@
+{
+  "name": "umurava",
+  "version": "1.0.0",
+  "description": "backend-service",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node ./dist/index",
+    "dev": "tsc && nodemon ./dist/index"
+  },
+  "author": "chael",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2"
+  },
+  "dependencies": {
+    "@types/config": "^3.3.5",
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/winston": "^2.4.4",
+    "config": "^3.3.12",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "winston": "^3.17.0"
+  }
+}
