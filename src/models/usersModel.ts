@@ -55,7 +55,6 @@ const userSchema = new Schema<IUser>({
     challenges_id:{
         type: [mongoose.Types.ObjectId],
         ref: "Challenge",
-        required: true
     }
 })
 

@@ -11,9 +11,9 @@ interface IChallanges {
     project_brief: string,
     project_requirements: string,
     is_open: string,
-    is_on_going: string,
+    is_on_going: boolean,
     skilled_needed: string,
-    is_completed: string
+    is_completed: boolean
 }
 
 const challengesSchema = new Schema<IChallanges>({
@@ -58,7 +58,7 @@ const challengesSchema = new Schema<IChallanges>({
         required: true
     },
     is_on_going: {
-        type: String,
+        type: Boolean,
         required: true
     },
     skilled_needed: {
@@ -66,7 +66,7 @@ const challengesSchema = new Schema<IChallanges>({
         required: true
     },
     is_completed: {
-        type: String,
+        type: Boolean,
         required: true
     }
 })
@@ -84,9 +84,9 @@ function validate (challange:IChallanges):ValidationResult{
         project_brief: Joi.string().required(),
         project_requirements: Joi.string().required(),
         is_open: Joi.string().required(),
-        is_on_going: Joi.string().required(),
+        is_on_going: Joi.boolean().required(),
         skilled_needed: Joi.string().required(),
-        is_completed: Joi.string().required(),
+        is_completed: Joi.boolean().required(),
     })
 
     return schema.validate(challange)
